@@ -3,16 +3,20 @@ public class User {
 	private int idUser; 
 	private String loginUser;
 	private String passwordUser;
-	private boolean isMembre;
-	private boolean isEmploye;
+	private String isMembre;
+	private String isEmploye;
 	
-	public User(int idUser, String loginUser, String passwordUser, boolean isMembre, boolean isEmploye) {
+	public User(int idUser, String loginUser, String passwordUser, String isMembre, String isEmploye) {
 		super();
 		this.idUser = idUser;
 		this.loginUser = loginUser;
 		this.passwordUser = passwordUser;
 		this.isMembre = isMembre;
 		this.isEmploye = isEmploye;
+	}
+
+	public User() {
+		
 	}
 	
 	public int getIdUser() {
@@ -33,19 +37,23 @@ public class User {
 	public void setPasswordUser(String passwordUser) {
 		this.passwordUser = passwordUser;
 	}
-	public boolean isMembre() {
-		return isMembre;
+	
+	public String getIsMembre() {
+		return "Membre";
 	}
-	public void setMembre(boolean isMembre) {
+
+	public void setIsMembre(String isMembre) {
 		this.isMembre = isMembre;
 	}
-	public boolean isEmploye() {
-		return isEmploye;
+
+	public String getIsEmploye() {
+		return "Employé";
 	}
-	public void setEmploye(boolean isEmploye) {
+
+	public void setIsEmploye(String isEmploye) {
 		this.isEmploye = isEmploye;
 	}
-	
+
 	public void login(String loginUser, String passwordUser) {
 		
 		
